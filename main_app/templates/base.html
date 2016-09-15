@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>TreasureGram</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top text-center">
+      <a href="/">
+        <img src="{% static 'images/logo.png' %}" alt="TreasureGram">
+      </a>
+    </nav>
+    <main class="container" role="main">
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer>
+      <h3>
+        <img src="{% static 'images/brand-icon.png' %}" height="50">
+        <span>&copy; TreasureGram 2016</span>
+        <img src="{% static 'images/brand-icon.png' %}" height="50">
+      </h3>
+    </footer>
+  </body>
+</html>
